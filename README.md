@@ -1,0 +1,2 @@
+# EnglishText2SpeechApp
+画像の英単語・英語の文章を読み上げてくれるアプリ
