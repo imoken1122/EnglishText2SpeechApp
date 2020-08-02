@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="AQW-cp-19c">
+            <objects>
+                <navigationController id="hQR-5j-eFV" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Uvr-Mh-ca0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="n25-xO-KBe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xlf-G3-z52" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-688" y="126"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="EnglishTextToSpeak" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MlT-CO-1Nq">
+                                <rect key="frame" x="57" y="322.66666666666669" width="300" height="91"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="0Hh-wv-j92"/>
+                                    <constraint firstAttribute="height" constant="91" id="PVQ-fc-DXR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mqo-5t-t35">
+                                <rect key="frame" x="127" y="567" width="173" height="80"/>
+                                <color key="backgroundColor" red="1" green="0.3015725518926623" blue="0.40837553728344211" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ajX-Zt-AoU"/>
+                                    <constraint firstAttribute="width" constant="100" id="c0z-EB-GZI"/>
+                                    <constraint firstAttribute="width" secondItem="Mqo-5t-t35" secondAttribute="height" multiplier="1:1" id="hkm-t5-iEy"/>
+                                </constraints>
+                                <state key="normal" title="カメラを起動">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aUD-yF-Wot"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Mqo-5t-t35" firstAttribute="centerX" secondItem="cZr-z6-Fjf" secondAttribute="centerX" id="6i2-OP-OcT"/>
+                            <constraint firstItem="Mqo-5t-t35" firstAttribute="top" secondItem="MlT-CO-1Nq" secondAttribute="bottom" constant="150" id="r70-wo-cZe"/>
+                            <constraint firstItem="MlT-CO-1Nq" firstAttribute="centerX" secondItem="cZr-z6-Fjf" secondAttribute="centerX" id="vw8-Ib-Y2I"/>
+                            <constraint firstItem="MlT-CO-1Nq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vy1-xW-4YP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cZr-z6-Fjf"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nEb-R5-f6F"/>
+                    <connections>
+                        <outlet property="OCRTextLabel" destination="MlT-CO-1Nq" id="NR7-Be-o5F"/>
+                        <outlet property="takePhotoButton" destination="Mqo-5t-t35" id="z7f-wU-5Ec"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="109.23913043478262"/>
+        </scene>
+    </scenes>
+</document>
